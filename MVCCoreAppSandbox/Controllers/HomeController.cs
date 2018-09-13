@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using MVCCoreAppSandbox.Models;
 using Sandbox.Services;
 using Sandbox.Services.ServiceInterfaces;
+using Mapster;
+using MVCCoreAppSandbox.ViewModels;
 
 namespace MVCCoreAppSandbox.Controllers
 {
@@ -21,8 +23,9 @@ namespace MVCCoreAppSandbox.Controllers
 
         public IActionResult Index()
         {
-            var asdf = _questionService.Get(4143);
-            return View();
+            var questionDto = _questionService.Get(4143);
+
+            return View(questionDto.Adapt<QuestionViewModel>());
         }
 
         public IActionResult About()

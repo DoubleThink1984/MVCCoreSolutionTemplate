@@ -1,4 +1,6 @@
-﻿@{
+﻿@model MVCCoreAppSandbox.ViewModels.QuestionViewModel;
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -24,10 +26,13 @@
             <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
+                    @*There are powerful new features in Visual Studio for building modern web apps.
+        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+            Learn More
+        </a>*@
+                    <a asp-action="About" asp-controller="Home">@Model.Id</a><br />
+                    <a asp-action="About" asp-controller="Home">@Model.Notes</a><br />
+                    <a asp-action="About" asp-controller="Home">@Model.Text</a><br />
                 </p>
             </div>
         </div>

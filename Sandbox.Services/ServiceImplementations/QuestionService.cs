@@ -1,4 +1,5 @@
-﻿using Sandbox.Models;
+﻿using Mapster;
+using Sandbox.Models;
 using Sandbox.Repository.RepositoryInterfaces;
 using Sandbox.Services.Dtos;
 using Sandbox.Services.ServiceInterfaces;
@@ -19,8 +20,8 @@ namespace Sandbox.Services.ServiceImplementations
 
         public QuestionDto Get(int id)
         {
-            var asdf = _questionRepository.Get(id);
-            return new QuestionDto { Id = asdf.Id};
+            var question = _questionRepository.Get(id);
+            return question.Adapt<QuestionDto>();
         }
 
         public IEnumerable<QuestionDto> GetAll()

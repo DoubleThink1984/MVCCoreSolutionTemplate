@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Sandbox.Services.Dtos
+namespace MVCCoreAppSandbox.ViewModels
 {
-    public class QuestionDto
+    public class QuestionViewModel
     {
         public int Id { get; set; }
 
@@ -15,9 +16,5 @@ namespace Sandbox.Services.Dtos
         public int Type { get; set; }
 
         public int Flags { get; set; }
-
-        public DateTime CreatedDate { get; set; }
-
-        public DateTime LastModifiedDate { get; set; }
     }
 }
