@@ -21,7 +21,7 @@ namespace Sandbox.Repository.RepositoryImplementations
             return query;
         }
 
-        public async Task<Question> GetSingleAsyn(int questionId)
+        public async Task<Question> GetSingleAsync(int questionId)
         {
             return await _context.Set<Question>().FindAsync(questionId);
         }

@@ -97,6 +97,22 @@
         </ul>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-12">
+        <div>
+
+        </div>
+        <hr />
+        <div>
+            @await Component.InvokeAsync("PriorityList", new { maxPriority = 2, isDone = false })
+        </div>
+        <hr />
+        <div>
+            <vc:priority-list max-priority="2" is-done="false">
+            </vc:priority-list> 
+        </div>
+    </div>
+</div>
 
 @*@section Scripts {
     <script>
